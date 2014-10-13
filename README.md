@@ -1,4 +1,4 @@
 CAPUBBS-Android
 ===============
 
-Android client of CAPUBBS
+Android client for CAPUBBS
