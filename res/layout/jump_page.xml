@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CAPUBBS" android:id="@+id/jumppage"
+    >
+
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+        <LinearLayout android:id="@+id/pgselect" android:paddingTop="15dp"
+            android:orientation="horizontal" android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/pagehint"
+            android:textSize="16sp"/>
+        <Spinner android:id="@+id/pageselect"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:singleLine="true"/>
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:id="@+id/jumpppagehint" android:layout_below="@+id/pgselect"
+            android:paddingTop="10dp"
+            android:textSize="18sp"/>
+        <LinearLayout android:id="@+id/yesornobutton" android:paddingTop="15dp"
+            android:layout_below="@+id/jumpppagehint" android:layout_centerHorizontal="true"
+            android:orientation="horizontal" android:layout_width="wrap_content"
+             style="?android:attr/buttonBarStyle"
+            android:layout_height="wrap_content">
+            <Button android:text="@string/jump" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/jumpp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:textSize="12sp"/>
+            <Button android:text="@string/cancel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/cancell"
+                style="?android:attr/buttonBarButtonStyle" 
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

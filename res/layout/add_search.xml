@@ -1,0 +1,124 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CAPUBBS" android:id="@+id/add_search"
+    >
+    
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+		
+		<EditText
+        	android:id="@+id/search_key" android:hint="@string/search_key"
+        	android:layout_width="fill_parent" android:textSize="16sp"
+        	android:paddingTop="10dp" android:singleLine="true"
+        	android:maxLength="15"
+        	android:layout_height="wrap_content" />
+	
+		<LinearLayout android:id="@+id/search_type_view" android:paddingTop="14dp"
+				android:layout_below="@+id/search_key"
+        	    android:orientation="horizontal" android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content">
+        	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        	    android:text="@string/search_type"
+        	    android:textSize="16sp"/>
+			
+			<RadioGroup android:id="@+id/search_type" android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+        			 android:orientation="horizontal"
+        		>
+        		<RadioButton android:id="@+id/type_thread" android:layout_width="wrap_content"
+        		    android:layout_height="wrap_content" android:textSize="16sp"
+        		    android:text="@string/type_thread"
+            	/>
+        		<RadioButton android:id="@+id/type_post" android:layout_width="wrap_content"
+        	    	android:layout_height="wrap_content" android:textSize="16sp"
+        	    android:text="@string/type_post"
+            	/>	
+    		</RadioGroup>
+    	</LinearLayout>
+    	
+		<LinearLayout android:id="@+id/search_board_view" android:paddingTop="14dp"
+			android:layout_below="@+id/search_type_view"
+        	    android:orientation="horizontal" android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content">
+        	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        	    android:text="@string/search_board"
+        	    android:textSize="16sp"/>
+       	 	<Spinner android:id="@+id/search_board"
+         	   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         	   android:singleLine="true"/>
+        </LinearLayout>
+
+
+		<LinearLayout android:id="@+id/search_begintime_view" android:paddingTop="14dp"
+			android:layout_below="@+id/search_board_view"
+        	    android:orientation="horizontal" android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content">
+        	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        	    android:text="@string/search_begintime"
+        	    android:textSize="16sp"/>
+       	 	<Spinner android:id="@+id/search_begintime_year"
+         	   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         	   android:singleLine="true"/>
+       	 	<Spinner android:id="@+id/search_begintime_month"
+         	   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         	   android:singleLine="true"/>
+       	 	<Spinner android:id="@+id/search_begintime_day"
+         	   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         	   android:singleLine="true"/>
+        </LinearLayout>
+		
+		<LinearLayout android:id="@+id/search_endtime_view" android:paddingTop="14dp"
+			android:layout_below="@+id/search_begintime_view"
+        	    android:orientation="horizontal" android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content">
+        	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        	    android:text="@string/search_endtime"
+        	    android:textSize="16sp"/>
+       	 	<Spinner android:id="@+id/search_endtime_year"
+         	   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         	   android:singleLine="true"/>
+       	 	<Spinner android:id="@+id/search_endtime_month"
+         	   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         	   android:singleLine="true"/>
+       	 	<Spinner android:id="@+id/search_endtime_day"
+         	   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         	   android:singleLine="true"/>
+        </LinearLayout>
+		
+		<EditText
+        	android:id="@+id/search_author" android:hint="@string/search_author"
+        	android:layout_width="fill_parent" android:textSize="16sp"
+        	android:paddingTop="14dp" android:singleLine="true"
+        	android:layout_below="@+id/search_endtime_view"
+        	android:maxLength="15"
+        	android:layout_height="wrap_content" />
+		
+		<LinearLayout style="?android:attr/buttonBarStyle"
+			android:paddingTop="14dp" android:layout_below="@+id/search_author"
+    	    android:layout_width="wrap_content"  android:layout_centerHorizontal="true"
+    	    android:layout_height="wrap_content" >
+
+	        <Button
+	            android:id="@+id/search_confirm_button"
+	            style="?android:attr/buttonBarButtonStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/search" />
+
+	        <Button
+	            android:id="@+id/search_cancel_button"
+	            style="?android:attr/buttonBarButtonStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/cancel" />
+
+	    </LinearLayout>
+		
+		
+	</RelativeLayout>
+</ScrollView>

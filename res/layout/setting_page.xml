@@ -1,0 +1,166 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CAPUBBS" android:id="@+id/settingpage"
+    >
+    
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <TableLayout android:id="@+id/setting_1" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp" android:layout_marginRight="2dp"
+        android:layout_marginBottom="10dp" android:stretchColumns="1"
+        android:background="@drawable/corners_bg"
+        >
+        
+        <TableRow android:id="@+id/auto_login" android:padding="10dp"
+            android:layout_width="fill_parent"
+            >
+               <TextView android:layout_width="wrap_content"
+               android:layout_height="wrap_content" android:textSize="15sp"
+               android:paddingLeft="10dp" android:text="@string/autologin"
+               />
+               
+               <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"/>
+
+               <Switch
+                   android:id="@+id/autoLogin"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   />
+     
+        </TableRow>
+        
+        <View
+            android:layout_height="1dip"  android:layout_width="fill_parent"
+            android:background="#B7B7B7" /> 
+        
+        <TableRow android:id="@+id/font" android:padding="10dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:paddingLeft="10dp" android:text="@string/font"
+                />
+            <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"/>
+
+               <Switch
+                   android:id="@+id/fontSize" android:text=""
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   />
+        </TableRow>
+        
+        <View
+            android:layout_height="1dip"  android:layout_width="fill_parent"
+            android:background="#B7B7B7" />
+        
+        <TableRow android:id="@+id/night_mode" android:padding="10dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:paddingLeft="10dp" android:text="@string/night"
+                />
+            <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"/>
+
+               <Switch
+                   android:id="@+id/imageView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   />
+        </TableRow>
+        
+        <!-- 
+        <View
+            android:layout_height="1dip"  android:layout_width="fill_parent"
+            android:background="#B7B7B7" /> 
+         
+        <TableRow android:id="@+id/proxy" android:padding="10dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:paddingLeft="10dp" android:text="@string/proxy"
+                />
+            <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"/>
+
+               <Switch
+                   android:id="@+id/setProxy"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   />
+        </TableRow>
+        -->
+    </TableLayout>
+    
+    <TableLayout  android:id="@+id/setting_2" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp" android:layout_marginRight="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/corners_bg">
+        
+        <TableRow android:id="@+id/showinweb" android:padding="10dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:paddingLeft="10dp" android:text="@string/showinweb"
+                />
+        </TableRow>
+        
+        <View android:id="@+id/view4"
+            android:layout_height="1dip"  android:layout_width="fill_parent"
+            android:background="#B7B7B7" /> 
+        
+        <TableRow android:id="@+id/sta" android:padding="10dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:paddingLeft="10dp" android:text="@string/sta"
+                />
+        </TableRow>
+        
+        <View    android:id="@+id/view5"
+            android:layout_height="1dip"  android:layout_width="fill_parent"
+            android:background="#B7B7B7" /> 
+        
+        <TableRow android:id="@+id/help" android:padding="10dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:paddingLeft="10dp" android:text="@string/help"
+                />
+        </TableRow>
+        
+        <View    android:id="@+id/view6"
+            android:layout_height="1dip"  android:layout_width="fill_parent"
+            android:background="#B7B7B7" /> 
+        
+        <TableRow android:id="@+id/about" android:padding="10dip">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="15sp"
+                android:paddingLeft="10dp" android:text="@string/about"
+                />
+        </TableRow>
+        
+    </TableLayout>
+    
+    <TableLayout  android:id="@+id/setting_3" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp" android:layout_marginRight="2dp"
+        android:layout_marginBottom="10dp" android:padding="10dp"
+        android:background="@drawable/corners_bg">
+        <TextView android:layout_width="wrap_content" android:id="@+id/unregisText"
+              android:layout_height="wrap_content" android:textSize="15sp"
+              android:paddingLeft="10dp" android:text="@string/unregis"
+              />
+       </TableLayout>
+    
+    </LinearLayout>
+</ScrollView>

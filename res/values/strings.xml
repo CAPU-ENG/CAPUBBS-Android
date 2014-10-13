@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CAPUBBS</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome">Welcome to CAPUBBS!</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="main">进入主页</string>
+    <string name="previous">上一页</string>
+    <string name="next">下一页</string>
+    <string name="post">发表</string>
+    <string name="reply">回复</string>
+    <string name="simple_item">1</string>
+    <string name="titlehint">请输入标题</string>
+    <string name="hinttext">请输入回复</string>
+    <string name="regisuserhint">如何才能注册一个好的ID？</string>
+    <string name="password2">确认密码</string>
+    <string name="code">请输入注册码</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="qq">QQ</string>
+    <string name="email">e-mail</string>
+    <string name="intro">自我介绍</string>
+    <string name="sig">签名档</string>
+    <string name="from">来自</string>
+    <string name="night">图片显示</string>
+    <string name="arrow">&gt;</string>
+    <string name="font">字体大小</string>
+    <string name="autologin">自动登录</string>
+    <string name="showinweb">网页版打开</string>
+    <string name="help">帮助与意见反馈</string>
+    <string name="about">关于</string>
+    <string name="sta">流量统计</string>
+    <string name="unregis">注销</string>
+    <string name="proxy">代理设置</string>
+    <string name="postsig">签名档：</string>
+    <string name="sig1">1</string>
+    <string name="sig2">2</string>
+    <string name="sig3">3</string>
+    <string name="sig0">无</string>
+    <string name="jumphint">请选择版面和帖子序号(选填)</string>
+    <string name="pagehint">请选择要跳转到的页面：</string>
+    <string name="seehint">帖号 (选填)</string>
+    <string name="pghint">页面编号</string>
+    <string name="jump">跳转</string>
+    <string name="cancel">取消</string>
+    <string name="more">•••</string>
+    <string name="picture">上传图片</string>
+    <string name="url">插入超链接</string>
+    <string name="addurl">请输入链接地址（必填）</string>
+    <string name="urlhint">请输入链接文字（可不填）</string>
+    <string name="search_key">请输入关键词</string>
+    <string name="search_type">搜索类型：</string>
+    <string name="type_thread">标题</string>
+    <string name="type_post">正文</string>
+    <string name="search_board">搜索版面：</string>
+    <string name="search_begintime">开始时间：</string>
+    <string name="search_endtime">结束时间：</string>
+    <string name="search_author">作者（不限制则不填）</string>
+    <string name="search">搜索</string>
+	
+</resources>
