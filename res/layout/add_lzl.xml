@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/lzlpost" android:paddingTop="10dp"
+        android:layout_width="fill_parent" android:textSize="16sp"
+        android:lines="8" android:gravity="left|top"  android:hint="@string/hinttext"
+        android:inputType="textMultiLine" android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content" android:maxLength="140">
+        <requestFocus />
+    </EditText>
+    
+    <LinearLayout style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content" android:layout_gravity="center"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/lzladdbtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reply" />
+
+        <Button
+            android:id="@+id/lzladdcancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

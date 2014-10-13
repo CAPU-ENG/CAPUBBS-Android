@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CAPUBBS">
+    <TextView android:id="@+id/text" android:layout_width="wrap_content"
+        android:textSize="18sp"  android:autoLink="web"
+        android:layout_height="wrap_content" android:layout_margin="10dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView android:id="@+id/floor" android:textColor="#FF808080"
+            android:textSize="16sp" android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"/>
+        <TextView android:id="@+id/author" android:textColor="#FFFF0000"
+            android:textSize="16sp" android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"/>
+        <TextView android:id="@+id/time" android:textColor="#FF800080"
+            android:textSize="16sp" android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"/>
+        <TextView android:id="@+id/lzl" android:textColor="#FF505050"
+            android:textSize="16sp" android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"/>
+    </LinearLayout>
+</LinearLayout>
