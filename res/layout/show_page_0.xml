@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants"
     tools:context=".CAPUBBS">
-    <TextView android:id="@+id/text" android:layout_width="wrap_content"
+    <com.capubbs.PatchedTextView android:id="@+id/text" android:layout_width="wrap_content"
         android:textSize="15sp" android:autoLink="web"
-        android:focusable="false"
         android:layout_height="wrap_content" android:layout_margin="10dp" />
     <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content"
         android:layout_width="wrap_content">
 
-        <TextView
+        <com.capubbs.PatchedTextView
             android:id="@+id/floor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,7 +20,7 @@
             android:textColor="#FF808080"
             android:textSize="13sp" />
 
-        <TextView
+        <com.capubbs.PatchedTextView
             android:id="@+id/author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +28,7 @@
             android:textColor="#FFFF0000"
             android:textSize="13sp" />
 
-        <TextView
+        <com.capubbs.PatchedTextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +36,7 @@
             android:textColor="#FF800080"
             android:textSize="13sp" />
 
-        <TextView
+        <com.capubbs.PatchedTextView
             android:id="@+id/lzl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

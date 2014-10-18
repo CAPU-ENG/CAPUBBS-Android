@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CAPUBBS">
-    <TextView android:id="@+id/text" android:layout_width="wrap_content"
+    <com.capubbs.PatchedTextView android:id="@+id/text" android:layout_width="wrap_content"
         android:textSize="15sp"
         android:layout_height="wrap_content" android:layout_margin="10dp" />
     <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-        <TextView android:id="@+id/author" android:textColor="#FFFF0000"
+        <com.capubbs.PatchedTextView android:id="@+id/author" android:textColor="#FFFF0000"
             android:textSize="13sp" android:layout_width="wrap_content"
              android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"/>
-        <TextView android:id="@+id/time" android:textColor="#FF800080"
+        <com.capubbs.PatchedTextView android:id="@+id/time" android:textColor="#FF800080"
             android:textSize="13sp" android:layout_width="wrap_content"
              android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"/>
