@@ -38,9 +38,8 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.*;
 import org.xml.sax.*;
 
-
 public class CAPUBBS extends Activity {	
-	static final String updateTime="2014-09-23";
+	static final String updateTime="2014-10-14";
 	ArrayList<String> list;
 	class Contents {
 		private String author,time,ftext;
@@ -109,8 +108,14 @@ public class CAPUBBS extends Activity {
 					
 					if (!showImage)
 						return auto;
-					if (!arg0.startsWith("http") && !arg0.startsWith("ftp"))
-						arg0="http://www.chexie.net"+arg0;
+					if (!arg0.startsWith("http") && !arg0.startsWith("ftp")) {
+						if (arg0.startsWith("../")) {
+							arg0=arg0.substring(2);
+							arg0="http://www.chexie.net/bbs"+arg0;
+						}
+						else 
+							arg0="http://www.chexie.net"+arg0;
+					}
 					Drawable drawable=null;
 					URL url;
 					try {
@@ -285,6 +290,7 @@ public class CAPUBBS extends Activity {
 			}
 		}
 	}
+	
 	String[] serialmap;
 	String[] floormap;
 	Spanned[] textmap;
@@ -450,6 +456,8 @@ public class CAPUBBS extends Activity {
 		DisplayMetrics displayMetrics=new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 		listWidth=displayMetrics.widthPixels;
+		float scale=getResources().getDisplayMetrics().density;
+		listWidth-=(int)(20*scale+0.5f);
 		init();
 	}
 	
@@ -857,7 +865,7 @@ public class CAPUBBS extends Activity {
 				
 				@Override
 				public boolean setViewValue(View arg0, Object arg1, String arg2) {
-					if (arg1 instanceof Spanned && arg0 instanceof TextView) {
+					if (arg1 instanceof Spanned && arg0 instanceof PatchedTextView) {
 						Spanned text=(Spanned)arg1;
 						int end=text.length();
 						Spannable spannable=(Spannable)text;
@@ -869,10 +877,10 @@ public class CAPUBBS extends Activity {
 									spannable.getSpanStart(urlSpan), spannable.getSpanEnd(urlSpan),
 									Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
 						}
-						((TextView)arg0).setText((Spanned)spannableStringBuilder);
+						((PatchedTextView)arg0).setText((Spanned)spannableStringBuilder);
 					}
 					else
-						((TextView)arg0).setText((String)arg1);
+						((PatchedTextView)arg0).setText((String)arg1);
 					return true;
 				}
 			});
@@ -2661,4 +2669,42 @@ public class CAPUBBS extends Activity {
 	    }
 	}
 	
+}
+
+class PatchedTextView extends TextView {
+	public PatchedTextView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+	}
+	public PatchedTextView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+	}
+	public PatchedTextView(Context context) {
+		super(context);
+	}
+	@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		try{
+			super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+		}catch (ArrayIndexOutOfBoundsException e){
+			setText(getText().toString());
+			super.onMeasure(widthMeasureSpec, heightMeasureSpec); 
+		}
+	}	
+	@Override
+	public void setGravity(int gravity){
+		try{
+			super.setGravity(gravity);
+		}catch (ArrayIndexOutOfBoundsException e){
+			setText(getText().toString());
+			super.setGravity(gravity); 
+		}
+	}
+	@Override
+	public void setText(CharSequence text, BufferType type) {
+		try{
+			super.setText(text, type);
+		}catch (ArrayIndexOutOfBoundsException e){
+			setText(text.toString());
+		}
+	}
 }
